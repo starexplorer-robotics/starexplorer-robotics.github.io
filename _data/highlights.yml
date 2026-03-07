@@ -1,0 +1,16 @@
+- title: Mobile platform
+  kicker: Unitree Go2W
+  metric: up to 2.5 m/s
+  description: The wheeled quadruped base is the main mobility platform for ramps, rough ground, and cluttered competition layouts.
+- title: Mounted manipulator
+  kicker: D1-550 arm
+  metric: 6 DoF
+  description: The arm is used for inspection and touch tasks once the full system remains stable under payload.
+- title: Sensor package
+  kicker: LiDAR plus RGB-D
+  metric: Livox, D435i, PandarQT
+  description: The robot combines onboard and handheld sensing devices for field awareness, inspection, and setup support.
+- title: Compute and operator support
+  kicker: Orin NX plus Steam Deck
+  metric: Onboard control plus teleop
+  description: The onboard computer runs the robot stack while portable operator tools remain available for monitoring and manual intervention.

@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-copy">
+      <p class="eyebrow">Star Explorer</p>
+      <p class="footer-title">ShanghaiTech University RoboCup Rescue team.</p>
+      <p>Built around the 2026 Team Description Paper and organized as a maintainable Jekyll site for GitHub Pages.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="{{ site.data.team.tdp_url | relative_url }}">Team Description Paper</a>
+      <a href="{{ site.data.team.collection_url }}">RoboCup TDP Collection</a>
+      <a href="{{ '/resources/' | relative_url }}">Resource hub</a>
+    </div>
+
+    <div class="footer-meta">
+      <p>{{ site.data.team.country }}</p>
+      <p>{{ site.data.team.competition }}</p>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.data.team.name }}</p>
+    </div>
+  </div>
+</footer>

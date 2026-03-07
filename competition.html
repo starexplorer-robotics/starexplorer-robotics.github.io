@@ -1,0 +1,121 @@
+---
+title: Competition
+permalink: /competition/
+description: Competition priorities, testing progress, deployment realities, and roadmap for Star Explorer.
+body_class: page-competition
+---
+
+<section class="page-hero">
+  <div class="shell split-grid">
+    <article class="panel">
+      <p class="eyebrow">Competition Plan</p>
+      <h1 class="section-title">Use RoboCup as a test of field readiness.</h1>
+      <p class="lede">The 2026 strategy is straightforward: make the full robot dependable in rough competition layouts, then bring more inspection and touch capability online as the platform matures.</p>
+      <div class="pill-row">
+        {% for task in site.data.competition.target_tasks %}
+          <span class="pill">{{ task }}</span>
+        {% endfor %}
+      </div>
+    </article>
+
+    <aside class="panel-dark">
+      <p class="eyebrow">Field Constraint</p>
+      <h2>Payload changes the mission strategy.</h2>
+      <p>The mounted manipulator helps with inspection and touch tasks, but it also shifts the platform dynamics. That tradeoff drives the team's mobility-first prioritization.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Priorities</p>
+        <h2 class="section-title">What the team is optimizing right now.</h2>
+      </div>
+      <p class="section-text">These priorities come directly from the team’s current competition preparation and are stated here in public-facing language.</p>
+    </div>
+
+    <div class="card-grid">
+      {% for item in site.data.competition.priorities %}
+        <article class="card">
+          <p class="kicker">Priority {{ forloop.index }}</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Experiments</p>
+        <h2 class="section-title">Current validation work.</h2>
+      </div>
+      <p class="section-text">The team has already been testing the robot in competition-like terrain and uses those rehearsals to decide what is ready for public demonstrations and formal runs.</p>
+    </div>
+
+    <div class="timeline">
+      {% for item in site.data.competition.experiments %}
+        <article class="timeline-card">
+          <span class="timeline-index">0{{ forloop.index }}</span>
+          <div class="timeline-copy">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.detail }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Roadmap</p>
+        <h2 class="section-title">Planned progression after the first deployment cycle.</h2>
+      </div>
+      <p class="section-text">The roadmap is intentionally practical: first secure dependable runs, then broaden the task set, then keep improving independence in harder rescue scenes.</p>
+    </div>
+
+    <div class="step-grid">
+      {% for item in site.data.competition.roadmap %}
+        <article class="step-card">
+          <span class="step-index">{{ item.phase }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell split-grid">
+    <article class="panel">
+      <p class="eyebrow">Deployment</p>
+      <h2>Travel, setup, and operator readiness.</h2>
+      <dl class="detail-list">
+        {% for item in site.data.competition.deployment %}
+          <div>
+            <dt>{{ item.label }}</dt>
+            <dd>{{ item.value }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </article>
+
+    <aside class="panel quote-card">
+      <p class="eyebrow">Research Frontier</p>
+      <h2>{{ site.data.competition.field_reality.title }}</h2>
+      <p class="lede">{{ site.data.competition.field_reality.description }}</p>
+      <div class="button-row">
+        <a class="button button-secondary" href="{{ '/resources/' | relative_url }}">Open supporting docs</a>
+      </div>
+    </aside>
+  </div>
+</section>

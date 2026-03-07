@@ -1,0 +1,50 @@
+name: Star Explorer
+institution: ShanghaiTech University Robotics Center
+country: China
+leader: Yuezhong Wang
+competition: RoboCup Rescue 2026
+team_url: https://starexplorer-robotics.github.io
+tdp_url: /Robocup_TDP_starexplorer.pdf
+collection_url: https://tdp.robocup.org/tdp/
+tagline: Rough-terrain rescue robotics built around a wheeled quadruped, a mounted arm, and a field-ready sensor package.
+summary: Team Star Explorer builds a rescue robot around the Unitree Go2W, a mounted manipulator, and a compact sensor suite for RoboCup Rescue.
+overview:
+  - Team Star Explorer is a newly formed RoboCup Rescue team from the Robotics Center of ShanghaiTech University. The team is building a practical field robot for mobility, inspection, and touch tasks in rescue-style environments.
+  - The current platform combines a wheeled quadruped, a D1-550 arm, several LiDAR and camera devices, and operator support tools. The public site focuses on the robot hardware, testing progress, and competition preparation.
+quick_facts:
+  - label: Competition
+    value: RoboCup Rescue 2026
+  - label: Base Platform
+    value: Unitree Go2W
+  - label: Mounted Arm
+    value: D1-550
+  - label: Main Compute
+    value: Jetson Orin NX 16 GB
+  - label: Sensor Set
+    value: Livox Mid-360, D435i, PandarQT
+  - label: Team Status
+    value: New team, first RoboCup cycle
+development_principles:
+  - title: Reliability first
+    description: Stable movement and safe operation matter more than showing every capability at once.
+  - title: Hardware-led integration
+    description: The public presentation centers on the robot platform, the arm, the sensors, and how they fit together in the field.
+  - title: Operator fallback
+    description: Steam Deck teleoperation stays available whenever manual intervention is safer than forcing the robot through a fragile rescue scene.
+members:
+  - name: Soren Schwertfeger
+    role: Advisor, Sponsor
+  - name: Weibang Bai
+    role: Advisor, Sponsor
+  - name: Kunyong Lv
+    role: Co-Advisor
+  - name: Bichi Zhang
+    role: Mobility and Platform Software
+  - name: Yuezhong Wang
+    role: System Integration
+  - name: Rongshen Yin
+    role: Task Perception
+  - name: Zhiqiao Guo
+    role: Navigation Integration
+  - name: Zhongli Yin
+    role: Environment Mapping

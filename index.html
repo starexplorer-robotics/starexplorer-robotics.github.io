@@ -1,5 +1,121 @@
-<!doctype html>
-<html>
-<head><meta charset="utf-8"><title>My Page</title></head>
-<body><h1>Hello everyone, this is a working site of star explorer robotics team</h1></body>
-</html>
+---
+title: Home
+description: Star Explorer is ShanghaiTech University's RoboCup Rescue team building a wheeled quadruped rescue robot with a mounted arm and field-ready sensor package.
+body_class: home
+---
+
+<section class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ site.data.team.competition }}</p>
+      <h1>A rescue robot team built around real hardware and field testing.</h1>
+      <p class="lede">{{ site.data.team.summary }} The public site highlights the robot configuration, testing progress, and competition preparation without going into internal implementation details.</p>
+
+      <div class="button-row">
+        <a class="button button-primary" href="{{ site.data.team.tdp_url | relative_url }}">Read the 2026 TDP</a>
+        <a class="button button-secondary" href="{{ '/systems/' | relative_url }}">See the hardware setup</a>
+      </div>
+
+      <dl class="stat-grid">
+        {% for fact in site.data.team.quick_facts %}
+          <div class="stat-card">
+            <dt>{{ fact.label }}</dt>
+            <dd>{{ fact.value }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </div>
+
+    <figure class="media-card media-card--hero">
+      <img src="{{ '/assets/images/robot-photo.jpg' | relative_url }}" alt="Star Explorer wheeled quadruped robot with a mounted arm in the test arena">
+      <figcaption class="media-copy">
+        <p class="eyebrow">Robot Photo</p>
+        <h2>Current competition platform in the test arena.</h2>
+        <p class="caption-note">The image comes from the 2026 Team Description Paper and shows the wheeled quadruped base with the mounted arm configured for field testing.</p>
+        <div class="button-row">
+          <a class="button button-secondary" href="{{ '/competition/' | relative_url }}">See competition priorities</a>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Platform Overview</p>
+        <h2 class="section-title">A public view of the robot hardware.</h2>
+      </div>
+      <p class="section-text">This site now focuses on the robot itself: the base platform, the arm, the sensors, the onboard computer, and the team’s real-world preparation for RoboCup.</p>
+    </div>
+
+    <div class="card-grid">
+      {% for item in site.data.highlights %}
+        <article class="card card--accent">
+          <p class="kicker">{{ item.kicker }}</p>
+          <h3>{{ item.title }}</h3>
+          <span class="metric">{{ item.metric }}</span>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell split-grid">
+    <article class="panel">
+      <p class="eyebrow">Public Priorities</p>
+      <h2>Hardware reliability comes before showy demos.</h2>
+      <div class="timeline">
+        {% for principle in site.data.team.development_principles %}
+          <div class="timeline-card">
+            <span class="timeline-index">0{{ forloop.index }}</span>
+            <div class="timeline-copy">
+              <h3>{{ principle.title }}</h3>
+              <p>{{ principle.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </article>
+
+    <aside class="panel quote-card">
+      <p class="eyebrow">Competition Stance</p>
+      <h2>Mobility first. Full task load when the platform is ready.</h2>
+      <p class="lede">The mounted arm is an important part of the system, but the team still prioritizes stable movement and dependable operation before pushing the full hardware stack through every task at once.</p>
+      <div class="pill-row">
+        {% for task in site.data.competition.target_tasks %}
+          <span class="pill">{{ task }}</span>
+        {% endfor %}
+      </div>
+      <div class="button-row">
+        <a class="button button-secondary" href="{{ '/team/' | relative_url }}">Meet the team</a>
+        <a class="button button-secondary" href="{{ '/resources/' | relative_url }}">Open resource hub</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Roadmap</p>
+        <h2 class="section-title">Three steps from first deployment to a more capable field robot.</h2>
+      </div>
+      <p class="section-text">The team treats RoboCup as an integration milestone: first prove stable field performance, then expand arm-assisted tasks, then push toward a more independent rescue platform.</p>
+    </div>
+
+    <div class="step-grid">
+      {% for item in site.data.competition.roadmap %}
+        <article class="step-card">
+          <span class="step-index">{{ item.phase }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,135 @@
+---
+title: Resources
+permalink: /resources/
+description: Public documents, downloadable references, and hardware factsheets for the Star Explorer RoboCup Rescue site.
+body_class: page-resources
+---
+
+<section class="page-hero">
+  <div class="shell split-grid">
+    <article class="panel">
+      <p class="eyebrow">Resource Hub</p>
+      <h1 class="section-title">Documents, links, and quick factsheets.</h1>
+      <p class="lede">This page collects the source paper, the official RoboCup archive, and compact appendix tables so judges, collaborators, and future team members can find key reference material quickly.</p>
+    </article>
+
+    <aside class="panel-dark">
+      <p class="eyebrow">Primary Reference</p>
+      <h2>The 2026 Team Description Paper is the canonical source.</h2>
+      <p>All public copy on this site is derived from the PDF and reorganized for easier browsing and maintenance.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Downloads and Links</p>
+        <h2 class="section-title">Core references.</h2>
+      </div>
+      <p class="section-text">These links are the shortest path to the paper itself, the official RoboCup archive, and the public site endpoint.</p>
+    </div>
+
+    <div class="resource-grid">
+      {% for item in site.data.resources %}
+        <article class="resource-card">
+          <p class="kicker">{{ item.type }}</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <div class="button-row">
+            <a class="button button-secondary" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">Open resource</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell table-grid">
+    <article class="table-card card">
+      <p class="eyebrow">Factsheet</p>
+      <h3>{{ site.data.hardware.tables.robot.title }}</h3>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in site.data.hardware.tables.robot.rows %}
+              <tr>
+                <td>{{ row.attribute }}</td>
+                <td>{{ row.value }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="table-card card">
+      <p class="eyebrow">Factsheet</p>
+      <h3>{{ site.data.hardware.tables.manipulation.title }}</h3>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in site.data.hardware.tables.manipulation.rows %}
+              <tr>
+                <td>{{ row.attribute }}</td>
+                <td>{{ row.value }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell table-grid">
+    <article class="table-card card">
+      <p class="eyebrow">Hardware Inventory</p>
+      <h3>Supplementary components</h3>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Part</th>
+              <th>Model</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in site.data.hardware.components %}
+              <tr>
+                <td>{{ item.part }}</td>
+                <td>{{ item.model }}</td>
+                <td>{{ item.quantity }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <figure class="media-card media-card--compact">
+      <img src="{{ '/assets/images/robot-photo.jpg' | relative_url }}" alt="Star Explorer rescue robot with mounted arm in the test arena">
+      <figcaption class="media-copy">
+        <p class="eyebrow">Robot Photo</p>
+        <h3>Competition platform reference image.</h3>
+        <p class="caption-note">This image is taken from the team’s 2026 TDP and used here as a public-facing hardware reference.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+- title: Mobile platform
+  description: The Unitree Go2W provides the main rescue mobility base for rough ground, ramps, and cluttered layouts.
+- title: Mounted arm
+  description: The D1-550 arm extends the platform toward inspection and touch tasks when the robot is stable under load.
+- title: Sensor set
+  description: Onboard LiDAR, RGB-D sensing, and a handheld scanner help the team document the scene and support field operation.
+- title: Onboard compute
+  description: Jetson Orin NX carries the main onboard stack and keeps the robot compact enough for competition use.
+- title: Operator station
+  description: A Steam Deck and laptop tools remain available for observation, mode switching, and manual intervention.
+- title: Transport and setup
+  description: Travel cases, modular hardware, and planned setup procedures help the team move from lab to competition field efficiently.

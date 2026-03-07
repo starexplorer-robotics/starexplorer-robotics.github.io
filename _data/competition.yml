@@ -1,0 +1,40 @@
+target_tasks:
+  - Mobility
+  - Inspection
+  - Touch
+priorities:
+  - title: Reliable mobility first
+    description: The first competition goal is a stable platform that can move through the course safely and consistently.
+  - title: Add the arm when stability allows
+    description: The arm is brought into full use when the base remains balanced and predictable under payload.
+  - title: Keep supervised modes ready
+    description: Remote operation remains available whenever manual intervention is the safer choice.
+roadmap:
+  - phase: Phase 1
+    title: Secure stable field performance
+    description: Complete the course reliably, handle rough ground, and keep the full hardware stack dependable.
+  - phase: Phase 2
+    title: Expand inspection and touch
+    description: Bring more arm-assisted tasks into competition runs once the mobile base is stable under payload.
+  - phase: Phase 3
+    title: Improve independence
+    description: Reduce setup dependence and make the robot more adaptable to changing rescue environments.
+experiments:
+  - title: Terrain trials
+    detail: Preliminary testing covered K-Rails, gravel, and a 15 degree slope to approximate challenging rescue terrain.
+  - title: Full-platform shakedown
+    detail: The team has been validating base movement, sensor integration, and overall system stability during end-to-end field rehearsals.
+  - title: Arm task rehearsals
+    detail: The mounted arm has already been exercised in inspection-style task runs to confirm reach, positioning, and operator control.
+  - title: Transport and setup practice
+    detail: The team is also refining packing, assembly, and battery-handling procedures for competition travel and deployment.
+deployment:
+  - label: Packing
+    value: Travel cases for both robot and manipulator
+  - label: Assembly
+    value: Approx. 30 min for Go2W and 180 min for the arm system
+  - label: Power logistics
+    value: Battery transport and handling constraints still need final competition planning
+field_reality:
+  title: Rescue scenes can change faster than a prepared setup
+  description: Real disaster environments are unstable, cluttered, and difficult to predict. The long-term goal is a robot that stays useful even when the scene changes after deployment.

@@ -1,0 +1,28 @@
+<header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="shell header-shell">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark">SX</span>
+      <span class="brand-copy">
+        <strong>{{ site.data.team.name }}</strong>
+        <span>{{ site.data.team.institution }}</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      Menu
+    </button>
+
+    <nav id="site-nav" class="site-nav" data-site-nav aria-label="Primary">
+      {% for item in site.data.navigation %}
+        {% assign is_active = false %}
+        {% if item.url == '/' and page.url == '/' %}
+          {% assign is_active = true %}
+        {% elsif item.url != '/' and page.url contains item.url %}
+          {% assign is_active = true %}
+        {% endif %}
+        <a class="site-nav__link{% if is_active %} is-active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
