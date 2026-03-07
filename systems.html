@@ -1,0 +1,214 @@
+---
+title: Systems
+permalink: /systems/
+description: Public hardware overview and reference tables for the Star Explorer rescue robot.
+body_class: page-systems
+---
+
+<section class="page-hero">
+  <div class="shell split-grid">
+    <article class="panel">
+      <p class="eyebrow">System Overview</p>
+      <h1 class="section-title">One rescue platform built from a clear hardware stack.</h1>
+      <p class="lede">This page focuses on the public-facing robot setup: the base platform, the arm, the sensors, the onboard computer, and the supporting equipment carried to the field.</p>
+    </article>
+
+    <aside class="panel-dark">
+      <p class="eyebrow">Current Setup</p>
+      <h2>Public hardware snapshot.</h2>
+      <dl class="detail-list">
+        {% for item in site.data.hardware.snapshot %}
+          <div>
+            <dt>{{ item.label }}</dt>
+            <dd>{{ item.value }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Robot Photo</p>
+        <h2 class="section-title">Current platform in the lab test arena.</h2>
+      </div>
+      <p class="section-text">The robot shown here is the main competition platform: a wheeled quadruped base with a mounted arm, operating in a rough-terrain practice environment.</p>
+    </div>
+
+    <div class="split-grid">
+      <figure class="media-card media-card--wide">
+        <img src="{{ '/assets/images/robot-photo.jpg' | relative_url }}" alt="Star Explorer rescue robot in a wooden obstacle arena">
+        <figcaption class="media-copy">
+          <p class="eyebrow">From the TDP</p>
+          <p class="caption-note">Photo extracted from the 2026 Team Description Paper.</p>
+        </figcaption>
+      </figure>
+
+      <article class="panel">
+        <p class="eyebrow">Public Capabilities</p>
+        <h2>What this hardware stack is built to support.</h2>
+        <ul class="stack-list">
+          <li>
+            <strong>Mobility in rough layouts</strong>
+            <span>The Go2W base is prepared for ramps, gravel, rails, and cluttered indoor rescue-style terrain.</span>
+          </li>
+          <li>
+            <strong>Inspection and touch tasks</strong>
+            <span>The mounted arm extends the robot toward practical competition tasks when the mobile base is stable under load.</span>
+          </li>
+          <li>
+            <strong>Field observation and operator support</strong>
+            <span>LiDAR, cameras, onboard compute, and teleoperation tools help the team monitor the robot and keep runs safe.</span>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Hardware</p>
+        <h2 class="section-title">Major modules in the current robot stack.</h2>
+      </div>
+      <p class="section-text">Each block has a practical role in the field: move, inspect, sense, compute, or support the operator.</p>
+    </div>
+
+    <div class="card-grid">
+      {% for module in site.data.hardware.modules %}
+        <article class="card card--accent">
+          <p class="kicker">{{ module.category }}</p>
+          <h3>{{ module.title }}</h3>
+          <p>{{ module.summary }}</p>
+          <div class="spec-list">
+            {% for spec in module.specs %}
+              <div class="spec-item">
+                <span>{{ spec.label }}</span>
+                <span>{{ spec.value }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Field Use</p>
+        <h2 class="section-title">How the platform is presented publicly.</h2>
+      </div>
+      <p class="section-text">Instead of exposing internal methods, the public site summarizes the robot in terms of physical modules, operator tools, and competition-facing use cases.</p>
+    </div>
+
+    <div class="step-grid">
+      {% for step in site.data.workflows %}
+        <article class="step-card">
+          <span class="step-index">0{{ forloop.index }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell table-grid">
+    <article class="table-card card">
+      <p class="eyebrow">Appendix Table</p>
+      <h3>{{ site.data.hardware.tables.robot.title }}</h3>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in site.data.hardware.tables.robot.rows %}
+              <tr>
+                <td>{{ row.attribute }}</td>
+                <td>{{ row.value }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="table-card card">
+      <p class="eyebrow">Appendix Table</p>
+      <h3>{{ site.data.hardware.tables.manipulation.title }}</h3>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in site.data.hardware.tables.manipulation.rows %}
+              <tr>
+                <td>{{ row.attribute }}</td>
+                <td>{{ row.value }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell table-grid">
+    <article class="table-card card">
+      <p class="eyebrow">Components</p>
+      <h3>Auxiliary hardware inventory</h3>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Part</th>
+              <th>Brand and model</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in site.data.hardware.components %}
+              <tr>
+                <td>{{ item.part }}</td>
+                <td>{{ item.model }}</td>
+                <td>{{ item.quantity }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <aside class="panel">
+      <p class="eyebrow">Operator Support</p>
+      <h3>Field readiness details</h3>
+      <dl class="detail-list">
+        {% for item in site.data.competition.deployment %}
+          <div>
+            <dt>{{ item.label }}</dt>
+            <dd>{{ item.value }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </aside>
+  </div>
+</section>

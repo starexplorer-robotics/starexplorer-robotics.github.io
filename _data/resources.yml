@@ -1,0 +1,12 @@
+- title: 2026 Team Description Paper
+  type: PDF
+  url: /Robocup_TDP_starexplorer.pdf
+  description: The full RoboCup Rescue 2026 Team Description Paper that this site is based on.
+- title: RoboCup TDP Collection
+  type: External
+  url: https://tdp.robocup.org/tdp/
+  description: Official RoboCup archive for team description papers and reference material.
+- title: Live Team Site
+  type: Website
+  url: https://starexplorer-robotics.github.io
+  description: Public GitHub Pages endpoint for the Star Explorer team site.

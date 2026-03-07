@@ -1,0 +1,152 @@
+snapshot:
+  - label: Mobile base
+    value: Unitree Go2W
+  - label: Arm
+    value: D1-550
+  - label: Main LiDAR
+    value: Livox Mid-360
+  - label: Task camera
+    value: Intel RealSense D435i
+  - label: Handheld scanner
+    value: PandarQT plus panoramic camera plus Xsens IMU
+  - label: Onboard compute
+    value: Jetson Orin NX 16 GB
+modules:
+  - category: Mobility
+    title: Unitree Go2W base
+    summary: A wheeled quadruped base chosen for rough terrain, slope handling, and stable traversal in cluttered rescue environments.
+    specs:
+      - label: Speed
+        value: 0 to 2.5 m/s
+      - label: Payload
+        value: 8 kg
+      - label: Terrain target
+        value: approx. 15 deg slopes
+  - category: Manipulation
+    title: D1-550 robotic arm
+    summary: A 6 DoF arm mounted on the robot for inspection, touch tasks, QR capture, and HazMat interaction in constrained spaces.
+    specs:
+      - label: Reach
+        value: 550 mm nominal, approx. 670 mm with gripper
+      - label: Payload
+        value: 0.5 kg
+      - label: Control
+        value: Ethernet plus onboard power
+  - category: Main LiDAR
+    title: Livox Mid-360
+    summary: An onboard LiDAR used for scene awareness and stable operation in complex indoor and outdoor layouts.
+    specs:
+      - label: Role
+        value: Scene awareness
+      - label: Coverage
+        value: Wide field of view with small blind zones
+      - label: Mount
+        value: On-robot sensor
+  - category: Handheld scanner
+    title: Handheld scanning rig
+    summary: A handheld rig combining LiDAR, panoramic imaging, and IMU sensing for field documentation and setup support.
+    specs:
+      - label: LiDAR
+        value: Hesai PandarQT
+      - label: Vision
+        value: Insta panoramic camera
+      - label: IMU
+        value: Xsens MTi-630R
+  - category: Task perception
+    title: Intel RealSense D435i
+    summary: RGB-D sensing for close-range inspection, scene viewing, and arm-assisted task work.
+    specs:
+      - label: Role
+        value: Task camera
+      - label: Use
+        value: Inspection and close-range observation
+      - label: Mount
+        value: Robot task view
+  - category: Compute and teleop
+    title: Orin NX plus Steam Deck
+    summary: Jetson Orin NX handles the onboard robot stack, while Steam Deck provides a compact fallback interface for locomotion and arm teleoperation.
+    specs:
+      - label: Compute
+        value: NVIDIA Orin NX 16 GB
+      - label: Operator device
+        value: Steam Deck
+      - label: Fallback control
+        value: Steam Deck profiles
+tables:
+  manipulation:
+    title: Manipulation System
+    rows:
+      - attribute: Name
+        value: D1-550
+      - attribute: System weight
+        value: 3.15 kg
+      - attribute: Weight with transport case
+        value: 4.5 kg
+      - attribute: Transportation size
+        value: 0.6 x 0.4 x 0.5 m
+      - attribute: Unpack and assembly time
+        value: 180 min
+      - attribute: Power consumption
+        value: 240 W
+      - attribute: Payload
+        value: 0.5 kg
+      - attribute: Reach
+        value: 550 mm
+      - attribute: Degrees of freedom
+        value: 6
+      - attribute: Cost
+        value: 4000 CNY
+  robot:
+    title: Robot Platform
+    rows:
+      - attribute: Name
+        value: Go2W
+      - attribute: Locomotion
+        value: Wheeled quadruped
+      - attribute: System weight
+        value: 18 kg
+      - attribute: Weight with transport case
+        value: 25 kg
+      - attribute: Transportation size
+        value: 0.85 x 0.45 x 0.55 m
+      - attribute: Typical operating size
+        value: 0.7 x 0.43 x 0.5 m
+      - attribute: Unpack and assembly time
+        value: 30 min
+      - attribute: Startup time
+        value: 20 min
+      - attribute: Power consumption
+        value: 3000 W
+      - attribute: Battery endurance
+        value: 240 / 150 / 100 min idle-normal-heavy
+      - attribute: Maximum speed
+        value: 2.5 m/s
+      - attribute: Payload
+        value: 8 kg
+      - attribute: Cost
+        value: 100000 CNY
+components:
+  - part: DC/DC
+    model: "-"
+    quantity: 1
+  - part: Battery management
+    model: Unitree battery system
+    quantity: 1
+  - part: Batteries
+    model: Unitree battery
+    quantity: 2
+  - part: Computing unit
+    model: Jetson Orin 16 GB
+    quantity: 1
+  - part: Wi-Fi adapter
+    model: "-"
+    quantity: 1
+  - part: IMU
+    model: Xsens MTi-630R
+    quantity: 1
+  - part: Cameras
+    model: RealSense D435i
+    quantity: 2
+  - part: Rugged operator laptop
+    model: ASUS ROG Zephyrus G14
+    quantity: 1

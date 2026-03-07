@@ -1,0 +1,30 @@
+modules:
+  - name: Onboard control
+    summary: The robot uses an onboard control stack to manage locomotion, sensor feeds, and general field operation.
+  - name: Sensor integration
+    summary: Camera, LiDAR, and IMU devices are integrated into one shared robot system for daily testing and competition preparation.
+  - name: Remote operation
+    summary: Operator tools remain available for observation, mode switching, and manual intervention whenever needed.
+  - name: Task execution
+    summary: The software stack supports competition tasks such as mobility, inspection, and touch without exposing internal implementation details on the public site.
+inventory:
+  - name: Ubuntu
+    version: "22.04"
+    license: Open
+    usage: Base operating system
+  - name: ROS
+    version: Humble
+    license: BSD
+    usage: Robot middleware
+  - name: PCL
+    version: "1.8"
+    license: BSD
+    usage: 3D data handling
+  - name: OpenCV
+    version: "4.8"
+    license: BSD
+    usage: Image processing
+  - name: Unitree SDK
+    version: "2"
+    license: GPL
+    usage: Robot integration

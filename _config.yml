@@ -1,0 +1,14 @@
+title: Star Explorer Robotics
+description: ShanghaiTech University RoboCup Rescue team focused on rough-terrain autonomy, mapping, and dexterous inspection.
+url: "https://starexplorer-robotics.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

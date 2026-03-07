@@ -1,0 +1,112 @@
+---
+title: Team
+permalink: /team/
+description: Team profile, contributors, and public-facing project principles for Star Explorer at ShanghaiTech University.
+body_class: page-team
+---
+
+<section class="page-hero">
+  <div class="shell split-grid">
+    <article class="panel">
+      <p class="eyebrow">Team Profile</p>
+      <h1 class="section-title">{{ site.data.team.name }}</h1>
+      {% for paragraph in site.data.team.overview %}
+        <p class="lede">{{ paragraph }}</p>
+      {% endfor %}
+      <div class="pill-row">
+        {% for task in site.data.competition.target_tasks %}
+          <span class="pill">{{ task }}</span>
+        {% endfor %}
+      </div>
+    </article>
+
+    <aside class="panel-dark">
+      <p class="eyebrow">Core Facts</p>
+      <h2>{{ site.data.team.institution }}</h2>
+      <dl class="detail-list">
+        <div>
+          <dt>Competition</dt>
+          <dd>{{ site.data.team.competition }}</dd>
+        </div>
+        <div>
+          <dt>Country</dt>
+          <dd>{{ site.data.team.country }}</dd>
+        </div>
+        <div>
+          <dt>Team leader</dt>
+          <dd>{{ site.data.team.leader }}</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>New team entering its first RoboCup cycle</dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Working Style</p>
+        <h2 class="section-title">A small team with a hardware-first integration mindset.</h2>
+      </div>
+      <p class="section-text">The public site mirrors the way the team works: start with a real robot, make it dependable, then keep improving what it can do in the field.</p>
+    </div>
+
+    <div class="card-grid">
+      {% for principle in site.data.team.development_principles %}
+        <article class="card">
+          <p class="kicker">Principle {{ forloop.index }}</p>
+          <h3>{{ principle.title }}</h3>
+          <p>{{ principle.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Contributors</p>
+        <h2 class="section-title">Current team roles.</h2>
+      </div>
+      <p class="section-text">These role labels come directly from the team appendix in the 2026 paper and can be updated later from one data file as the roster evolves.</p>
+    </div>
+
+    <div class="member-grid">
+      {% for member in site.data.team.members %}
+        <article class="member-card">
+          <p class="kicker">Member {{ forloop.index }}</p>
+          <h3>{{ member.name }}</h3>
+          <p>{{ member.role }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell split-grid">
+    <article class="panel">
+      <p class="eyebrow">Site Source of Truth</p>
+      <h2>The TDP remains the reference document.</h2>
+      <p class="lede">This website is organized around the 2026 Team Description Paper. Future updates should usually start in the data files and then propagate into the public pages, rather than editing raw markup everywhere.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="{{ site.data.team.tdp_url | relative_url }}">Open the PDF</a>
+      </div>
+    </article>
+
+    <aside class="panel">
+      <p class="eyebrow">External Links</p>
+      <h2>Reference points.</h2>
+      <div class="button-row">
+        <a class="button button-secondary" href="{{ site.data.team.collection_url }}">RoboCup TDP archive</a>
+        <a class="button button-secondary" href="{{ site.data.team.team_url }}">Public site URL</a>
+      </div>
+    </aside>
+  </div>
+</section>
